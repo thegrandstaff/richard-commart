@@ -3,16 +3,24 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import SideMenu from './Navigation/SideMenu';
-import Home from './Pages/Home';
+import Home from './Pages/Home.js';
+import Artists from './Pages/Artists';
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        <SideMenu/>
-        <Switch>
-          <Route path='/home'><Home /></Route>
-        </Switch>
+      <main>
+        <div className="left">
+        <SideMenu />
+        </div>
+        <div className="right">
+          <Switch>
+            <Route path="/home" exact><Home/></Route>
+            <Route path="/artists" exact component={Artists}></Route>
+          </Switch>
+        </div>
+        </main>
       </Router>
     </div>
   );
