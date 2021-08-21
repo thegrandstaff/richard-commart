@@ -1,16 +1,28 @@
 import React from "react";
-import * as FaIcons from "react-icons";
-import SideMenuData from "./SideMenuData";
-import {Link} from 'react-router-dom';
+import "../App.css";
+import { SideMenuData } from './SideMenuData';
 
-const SideMenu = () => {
+function SideMenu() {
     return (
-        <div className="main-sidebar">
-            <Link to="#" className='menu-bars'>
-                <h2>HOME</h2>
-            </Link>
+        <div className="sidemenu">
+            <ul className="sidemenu-list">
+                {SideMenuData.map((val, key) => {
+                    return (
+                        <li 
+                        key={key} 
+                        className="row" 
+                        onClick={() => {
+                            window.location.pathname = val.link
+                        }}
+                        >
+                            <div id="icon">{val.icon}</div>
+                            <div id="title">{val.title}</div>
+                        </li>
+                    );
+                })}
+            </ul>
         </div>
-    )
-};
+    );
+}
 
 export default SideMenu;
