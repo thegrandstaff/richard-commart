@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Home.css";
+import '../App.css';
 
 const Home = () => {
     return (
-        <div>
-            <h1>HACK THE 6IX 2021</h1>
+        <div className="home">
+            <h2>HACK THE 6IX 2021</h2>
         </div>
     )
 }
