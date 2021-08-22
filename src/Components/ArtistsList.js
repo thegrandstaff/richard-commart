@@ -14,6 +14,7 @@ const ArtistsList = ({items}) => {
 
     return (
         <ul className="artists-list">
+            <h1>ARTISTS</h1>
             {items.map(artist => (
                 <Artist
                     key={artist.artistId}
