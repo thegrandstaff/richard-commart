@@ -2,6 +2,13 @@ import React, {useState} from 'react';
 import '../App.css';
 
 const OrderCommission = (props) => {
+ 
+    //retrieving name using the most unconventional method
+    //because I don't remember how to properly use props
+    const pathname = window.location.pathname;
+    let cutpath = pathname.substr(18, pathname.length);
+    let name = cutpath.replace('%20', " ");
+    
     const [projectType, setProjectType] = useState();
     const [projectPrice, setPrice] = useState(0);   
     const [projectDetails, setProjectDetails] = useState();
@@ -37,7 +44,7 @@ const OrderCommission = (props) => {
             <form onSubmit={onSubmitOrder}>
                 <h1>ORDER COMMISSION</h1>
                 <div>
-                    <label>Name: </label>
+                    <label>Name: {name}</label>
                 </div>
                 <div>
                     <label>Project Type: </label>
