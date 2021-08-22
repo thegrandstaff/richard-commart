@@ -7,7 +7,7 @@ import ArtistsList from '../Components/ArtistsList';
 const DUMMY_ARTISTS = [
     {
         artistId: 1,
-        artistName: "Arty",
+        artistName: "Arty McArty",
         artistEmail: "arty@commart.com",
         artistAddress: "1 Arty Drive",
         artistTag: "Digital Artist"

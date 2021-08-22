@@ -19,7 +19,7 @@ const App = () => {
           <Switch>
             <Route path="/home" exact><Home/></Route>
             <Route path="/artists" exact><Artists/></Route>
-            <Route path="/order-commission"><OrderCommission/></Route>
+            <Route path="/order-commission/:artistId"><OrderCommission/></Route>
           </Switch>
         </div>
         </main>
